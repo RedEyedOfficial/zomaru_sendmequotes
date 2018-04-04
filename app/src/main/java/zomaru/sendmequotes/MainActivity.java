@@ -67,12 +67,12 @@ public class MainActivity extends AppCompatActivity
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                relay = Settings.isWallpaperCustom;
+                relay = Settings.isWallpaperCustom; // mengambil nilai boolean dari class Setting //
                 // jika user sudah mengaktifkan custom wallpaper, maka kode berikut akan dieksekusi //
                 if (relay) {
                     Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                     startActivityForResult(intent, WALLPAPER);
-                    imageButton.setVisibility(View.INVISIBLE);
+                    imageButton.setVisibility(View.INVISIBLE); // imageButton dibuat invisible demi kenyamanan bersama saat melihat wallpaper :D //
                 } else {
                     Toast toast = Toast.makeText(MainActivity.this, "Aktifin dulu custom wallpaper di pengaturan gan!", Toast.LENGTH_LONG);
                     toast.show();
@@ -97,12 +97,14 @@ public class MainActivity extends AppCompatActivity
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.menu_help:
-                        Mcb = Settings.isTutorOn;
+                        Mcb = Settings.isTutorOn; // mengambil nilai boolean dari class Settings //
+                        // jika user sudah mengaktifkan tutorial di pengaturan, maka code berikut akan dieksekusi //
                         if (Mcb) {
                             startTargetViewOnNavbar();
                         } else {
                             Toast noTutor = Toast.makeText(MainActivity.this, "No tutorial :(", Toast.LENGTH_LONG);
                             noTutor.show();
+                            // jika belum, maka kode diatas akan dieksekusi //
                         }
                         break;
                     case R.id.menu_trivia:
@@ -113,7 +115,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
         SettingCreator.mainActivityDialogCreator(this);
-        vibrateOn(this);
+        vibrateOn(this); // getar akan hidup kalau user sudah mengaktifkan getar di pengaturan //
     }
 
     @Override
@@ -125,45 +127,45 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onResume() {
         super.onResume();
-        sekring = Settings.isUsernameAssigned;
-        fuse = Settings.isCustomOn;
-        UsernameRetriever = Settings.usernameBroadcaster;
+        sekring = Settings.isUsernameAssigned; // mengambil nilai boolean dari class Settings //
+        fuse = Settings.isCustomOn; // mengambil nilai boolean dari class Settings //
+        UsernameRetriever = Settings.usernameBroadcaster; // mengambil nilai String dari class Settings //
         if (sekring) {
-            usernameUser.setText("Selamat Datang, " + UsernameRetriever);
+            usernameUser.setText("Selamat Datang, " + UsernameRetriever); // jika nilai boolean sekring terpenuhi, maka teks di mainactivity akan menampilkan input default + input user dari EditTextPreference di pengaturan //
         } else if (fuse) {
-            usernameUser.setText(UsernameRetriever);
+            usernameUser.setText(UsernameRetriever); // jika pilihan custom username diaktifkan di pengaturan, maka seluruh input dari user akan ditampilkan di mainactivity //
         }
-        intReceiver = Settings.WallpaperValue;
+        intReceiver = Settings.WallpaperValue; // mengambil nilai int dari class Settings //
         switch (intReceiver) {
             case 1:
                 imageButton = (ImageButton)findViewById(R.id.wallpaperpicker);
                 ima1.setImageResource(R.drawable.my_dear);
-                imageButton.setVisibility(View.INVISIBLE);
+                imageButton.setVisibility(View.INVISIBLE); // imageButton dibuat invisible demi kenyamanan bersama saat melihat wallpaper :D // 
                 break;
             case 2:
                 imageButton = (ImageButton)findViewById(R.id.wallpaperpicker);
                 ima1.setImageResource(R.drawable.zerotwo);
-                imageButton.setVisibility(View.INVISIBLE);
+                imageButton.setVisibility(View.INVISIBLE); // imageButton dibuat invisible demi kenyamanan bersama saat melihat wallpaper :D //
                 break;
             case 3:
                 imageButton = (ImageButton)findViewById(R.id.wallpaperpicker);
                 ima1.setImageResource(R.drawable.akame2);
-                imageButton.setVisibility(View.INVISIBLE);
+                imageButton.setVisibility(View.INVISIBLE); // imageButton dibuat invisible demi kenyamanan bersama saat melihat wallpaper :D //
                 break;
             case 4:
                 imageButton = (ImageButton)findViewById(R.id.wallpaperpicker);
                 ima1.setImageResource(R.drawable.mary2);
-                imageButton.setVisibility(View.INVISIBLE);
+                imageButton.setVisibility(View.INVISIBLE); // imageButton dibuat invisible demi kenyamanan bersama saat melihat wallpaper :D //
                 break;
             case 5:
                 imageButton = (ImageButton)findViewById(R.id.wallpaperpicker);
                 ima1.setImageResource(R.drawable.methode);
-                imageButton.setVisibility(View.INVISIBLE);
+                imageButton.setVisibility(View.INVISIBLE); // imageButton dibuat invisible demi kenyamanan bersama saat melihat wallpaper :D //
                 break;
             case 6:
                 imageButton = (ImageButton)findViewById(R.id.wallpaperpicker);
                 ima1.setImageResource(R.drawable.nao);
-                imageButton.setVisibility(View.INVISIBLE);
+                imageButton.setVisibility(View.INVISIBLE); // imageButton dibuat invisible demi kenyamanan bersama saat melihat wallpaper :D //
         }
     }
 
@@ -218,12 +220,8 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.exit) {
             exitSound();
             final AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
