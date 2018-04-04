@@ -54,7 +54,6 @@ public class MainActivity extends AppCompatActivity
     public static TextView usernameUser;
     public static String UsernameRetriever;
     public static ImageButton imageButton;
-    public boolean penunjukTombol;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +68,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 relay = Settings.isWallpaperCustom;
+                // jika user sudah mengaktifkan custom wallpaper, maka kode berikut akan dieksekusi //
                 if (relay) {
                     Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                     startActivityForResult(intent, WALLPAPER);
@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity
                 } else {
                     Toast toast = Toast.makeText(MainActivity.this, "Aktifin dulu custom wallpaper di pengaturan gan!", Toast.LENGTH_LONG);
                     toast.show();
+                    // jika tidak, maka kode diatas akan dieksekusi //
                 }
             }
         });
