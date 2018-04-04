@@ -5,3 +5,4 @@ jadi, mohon maaf soal coding saya disini yang masih acak-acakan dan banyak memor
 
 - Aplikasi ini dibuat hanya sebagai iseng-iseng dan sambil belajar app development
 - Some files (Audio files) which i insert into this app are owned by their respective owner, hereby i do not claim those audio files as mine.
+- library used: TapTargetView by KeepSafe
