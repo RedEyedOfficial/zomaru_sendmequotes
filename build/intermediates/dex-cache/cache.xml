@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/d9b8ea4b920dce56688aaacd3167cc3696eb6b17/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b12cd9c87c3dfb012a911b6e38d2444ed0a65e1f">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/pre-dexed/release/classes_68a377f763bee614d61428ac9d62e48a1891b58c.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/.android/build-cache/ac567d80fc6167c48d08c3e99900537bb1105660/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="233f60a165ae622c8b36731502ebbda0f65e1930">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a00760e1aa38cddd53b504444682fc829b82680d/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/7cf619275efee5161a2279ab11a9addf84d3f999/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a37fc31c5ceeaa4532a37358add1b189d8db4af1">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/pre-dexed/release/classes_84aead9de00167d49a9190c4602c0918466b0717.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/Android/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/pre-dexed/release/constraint-layout-solver-1.0.2_fa08fe38ade8b1431b498f715158542dbc9bae3b.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/.android/build-cache/8508d42c8649b3d0a60d8504b2c028823e5b251a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e98a3a9bdea854f930e1cb83bba52dbb2c04dfbb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/Android/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.2_fa08fe38ade8b1431b498f715158542dbc9bae3b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/.android/build-cache/7a097cb179f0c99ace531c9f3fa083e5ee5317ae/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="7efef32744ca4a436492d5cf28c08698cc2af256">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_726a2c20cd641377b1a8aa5609a42dbd092ce682/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/.android/build-cache/a4a382c6397bd2c2a1100e04437e1a8904d09047/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6f4138a4e065826cb044d49faea4cfd7191773d1">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8be9ddb346d49a4f0d7c0ef4f5be5b538ed88b3e/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/a4a382c6397bd2c2a1100e04437e1a8904d09047/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6f4138a4e065826cb044d49faea4cfd7191773d1">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/pre-dexed/release/classes_8be9ddb346d49a4f0d7c0ef4f5be5b538ed88b3e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/7a097cb179f0c99ace531c9f3fa083e5ee5317ae/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="7efef32744ca4a436492d5cf28c08698cc2af256">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/pre-dexed/release/classes_726a2c20cd641377b1a8aa5609a42dbd092ce682.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/8508d42c8649b3d0a60d8504b2c028823e5b251a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/pre-dexed/release/classes_e98a3a9bdea854f930e1cb83bba52dbb2c04dfbb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/c47e8b5d29c74e086d2fb18468497335c534a759/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f97cf85b0fe70d37a705111dafa6b1b418ea1650">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/pre-dexed/release/classes_70369798e07d5757067ffbf0420e551755ec1f89.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.0/e414a4cb28434e25c4f6aa71426eb20cf4874ae9/common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/pre-dexed/release/common-1.0.0_93fa78f27393294126ac1a87b7cef32adcf4140b.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/.android/build-cache/f559a96839f193f7ea7727ecc2a45c108e9ab9cc/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f428e2fbc9ed0b297e3a3f420e51e6982f66822d">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_11f4141c65524ddd99d3354c979faafe1cfe5e92/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/5aefe283ae6c29f439939523f0137bcabe1d533b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/pre-dexed/release/classes_e158e1a1f3593f5eec888ae95bd9d5c15ac896da.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/898b2a501917f28967ac378e5fbe47f781e82b31/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="508f50705b4fde51a16259f29c854201a3044516">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/pre-dexed/release/classes_4d5b37efeecd7986bafea062f5452efecaf165a1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/f559a96839f193f7ea7727ecc2a45c108e9ab9cc/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f428e2fbc9ed0b297e3a3f420e51e6982f66822d">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/pre-dexed/release/classes_11f4141c65524ddd99d3354c979faafe1cfe5e92.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/.android/build-cache/898b2a501917f28967ac378e5fbe47f781e82b31/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="508f50705b4fde51a16259f29c854201a3044516">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4d5b37efeecd7986bafea062f5452efecaf165a1/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/ac567d80fc6167c48d08c3e99900537bb1105660/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="233f60a165ae622c8b36731502ebbda0f65e1930">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/pre-dexed/release/classes_a00760e1aa38cddd53b504444682fc829b82680d.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/.android/build-cache/b890eb8502ecbd4d600d42abc41032cc9cda90f0/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="58b12bdb21a84f22e0dc3b047aeceb0a546b1b44">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6c634c9c3e5a12e9eca0d8894f019efbef99e6f5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/.android/build-cache/48b88e8df5ab249b1d02d040091c6470a4e56fd8/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d6dd52cb83e1ffcdf049223fde3ced9d7beb2f42">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_103cc9b68de04463ac6674a6872e3fbf7102019d/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/7b1bb6db2b271bbb0878a81cdca4e67960f9735a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2442771a5590dd4eb4bce00c2e9dca9e22e4c963">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/pre-dexed/release/classes_93f9e92cc1d448f799e4abc466c83b06399166ec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/9d71af4f3e3282c858d2f18cf232a2139db877d0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="40392f30a601db5675cdf18192aab013d6fee6ec">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/pre-dexed/release/classes_393718422d1ad0615375e62d9e7ac3c878e13858.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.0.0/a2d487452376193fc8c103dd2b9bd5f2b1b44563/common-1.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/transforms/dex/debug/folders/1000/10/common-1.0.0_9acd00f8684b999f23bc1219658cc93a0b271f3d/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/6cdf41b06e73b2bb8260031d62372a752508520a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b4d6fbbb48b42dd03fd9c5a09b3b7a53266df6ed">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/pre-dexed/release/classes_4f86fd1689be845ea6ae20b9a82047ffbfa7d481.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/.android/build-cache/c47e8b5d29c74e086d2fb18468497335c534a759/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f97cf85b0fe70d37a705111dafa6b1b418ea1650">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_70369798e07d5757067ffbf0420e551755ec1f89/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.0/e414a4cb28434e25c4f6aa71426eb20cf4874ae9/common-1.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/transforms/dex/debug/folders/1000/10/common-1.0.0_93fa78f27393294126ac1a87b7cef32adcf4140b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/.android/build-cache/7b1bb6db2b271bbb0878a81cdca4e67960f9735a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2442771a5590dd4eb4bce00c2e9dca9e22e4c963">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_93f9e92cc1d448f799e4abc466c83b06399166ec/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/.android/build-cache/6cdf41b06e73b2bb8260031d62372a752508520a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b4d6fbbb48b42dd03fd9c5a09b3b7a53266df6ed">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4f86fd1689be845ea6ae20b9a82047ffbfa7d481/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/48b88e8df5ab249b1d02d040091c6470a4e56fd8/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d6dd52cb83e1ffcdf049223fde3ced9d7beb2f42">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/pre-dexed/release/classes_103cc9b68de04463ac6674a6872e3fbf7102019d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.0.0/a2d487452376193fc8c103dd2b9bd5f2b1b44563/common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/pre-dexed/release/common-1.0.0_9acd00f8684b999f23bc1219658cc93a0b271f3d.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/.android/build-cache/9d71af4f3e3282c858d2f18cf232a2139db877d0/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="40392f30a601db5675cdf18192aab013d6fee6ec">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_393718422d1ad0615375e62d9e7ac3c878e13858/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/26.1.0/814258103cf26a15fcc26ecce35f5b7d24b73f8/support-annotations-26.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="0814258103cf26a15fcc26ecce35f5b7d24b73f8">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-26.1.0_c2a404c42de000da3f3c0fe0f579380db66e3efd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/.android/build-cache/9601c862b25b4c8179ee1b8ad5ccd76bee618f1c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b62fdc4cfef174c1e456014195c83fa7de7dc041">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1f83581e5dd161170a8da8f017f56b6a33739152/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/26.1.0/814258103cf26a15fcc26ecce35f5b7d24b73f8/support-annotations-26.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="0814258103cf26a15fcc26ecce35f5b7d24b73f8">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/pre-dexed/release/support-annotations-26.1.0_c2a404c42de000da3f3c0fe0f579380db66e3efd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/9601c862b25b4c8179ee1b8ad5ccd76bee618f1c/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b62fdc4cfef174c1e456014195c83fa7de7dc041">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/pre-dexed/release/classes_1f83581e5dd161170a8da8f017f56b6a33739152.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/b890eb8502ecbd4d600d42abc41032cc9cda90f0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="58b12bdb21a84f22e0dc3b047aeceb0a546b1b44">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/pre-dexed/release/classes_6c634c9c3e5a12e9eca0d8894f019efbef99e6f5.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_3d7db2ecc84c68c3a823133510639938891c7df2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="5f08a202b77c65d6683513010f38f8d9fd9dfa29">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_93a857fe1135491006780ace9f10359b8af717d4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/.android/build-cache/5aefe283ae6c29f439939523f0137bcabe1d533b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e158e1a1f3593f5eec888ae95bd9d5c15ac896da/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/.android/build-cache/7cf619275efee5161a2279ab11a9addf84d3f999/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a37fc31c5ceeaa4532a37358add1b189d8db4af1">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_84aead9de00167d49a9190c4602c0918466b0717/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/.android/build-cache/f17e5656f8cee41ba69f053d5aaa253fa0b99097/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="7f6b3eace9cc0d8ad79f6d0018532d4d402873bd">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_88af1cd212d1adf78dc9ac3585ea88b8072ac349/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/f17e5656f8cee41ba69f053d5aaa253fa0b99097/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="7f6b3eace9cc0d8ad79f6d0018532d4d402873bd">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/pre-dexed/release/classes_88af1cd212d1adf78dc9ac3585ea88b8072ac349.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/.android/build-cache/d9b8ea4b920dce56688aaacd3167cc3696eb6b17/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b12cd9c87c3dfb012a911b6e38d2444ed0a65e1f">
+        <dex dex="/root/AndroidStudioProjects/SendMeQuotes/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_68a377f763bee614d61428ac9d62e48a1891b58c/classes.dex" />
+    </item>
+
+</items>

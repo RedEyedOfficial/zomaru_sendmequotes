@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="276dp"
+        android:id="@+id/abl2"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/cltl2"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/colorPrimary"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="64dp"
+            android:background="@drawable/material2"
+            app:collapsedTitleGravity="center_horizontal">
+
+            <Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:id="@+id/tb2"
+                android:theme="@style/toolbar_other_feature"
+                app:popupTheme="@style/Base.ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="fill_vertical"
+            android:id="@+id/ns2"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:id="@+id/linearlayoutchild"
+                android:fitsSystemWindows="true"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="550dp"
+                    android:id="@+id/recycler_changelog"
+                    android:scrollbars="vertical"
+                    android:fitsSystemWindows="true"/>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/image_recycler_changelog"
+                    android:src="@drawable/ic_android" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:layout_below="@id/image_recycler_changelog"
+                    android:ellipsize="marquee"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:id="@+id/text_changelog_title"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/image_recycler_changelog"
+                    android:gravity="center_vertical"
+                    android:id="@+id/text_changelog_subtitle"
+                    android:textColor="@color/colorAccent"
+                    android:fitsSystemWindows="true"
+                    android:textSize="10dp"/>
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

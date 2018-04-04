@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">Send Me Quotes!</string>
+    <string name="app_info">App info</string>
+    <string name="changelog">Changelog</string>
+    <string name="about_phone">Phone info</string>
+    <string name="other_feature">Fitur lainnya</string>
+    <string name="free_ram">Clean RAM</string>
+    <string name="other_group">Menu lainnya</string>
+    <string name="theme_swap">Ganti tema</string>
+    <string name="theme_red">Merah menyala</string>
+    <string name="theme_blue">Biru samudra</string>
+    <string name="theme_white">Putih susu</string>
+    <string name="theme_green">Hijau daun</string>
+    <string name="theme_default">Tema awal</string>
+    <string name="theme_yellow">Kuning cerah</string>
+    <string name="theme_mix">Es campur</string>
+    <string name="share">Share</string>
+    <string name="exit">Exit</string>
+    <string name="help_menu">Help</string>
+    <string name="settings">Pengaturan</string>
+    <string name="trivia_menu">Trivia</string>
+    <string name="trivia_text">Trivia \n\nMari kita lihat apa saja yang menginspirasi developernya dalam mengembangkan aplikasi ini, setiap elemen disini punya cerita sendiri-sendiri \n\n 1. Efek Transisi gambar monika, terinspirasi dari halaman login app Instagram \n\n 2. Pesan dilayar yang disertai getar pada saat aplikasi ini pertama dibuka terinspirasi dari halaman redirect iklan yang sering muncul ketika browsing menggunakan smartphone \n\n 3. Desain bottom navigation view terinspirasi dari bottom navigation view app BBM yang versi lama \n\n 4. Desain warna navigation drawer aplikasi ini terinspirasi dari desain warna aplikasi settings bawaan custom ROM CyanogenOS \n\n 5. Suara tematik yang ada di aplikasi ini sebagian diambil dari custom ROM Hydrogen OS \n\n 6. Aplikasi ini tidak untuk diperjualbelikan dengan cara apapun! \n\n 7. Aplikasi ini dikembangkan ketika saya sedang libur kerja saja XD \n\n 8. Pada awalnya aplikasi ini bertujuan untuk membawa kembali fitur-fitur untuk tweaking sebuah device, namun karena dirasa hal itu cukup rumit untuk memulai, maka konsep aplikasi ini berubah seiring waktu \n\n 9. Developer aplikasi ini sedang single \n\n 10. Bahasa yang dimuat pada aplikasi dibuat hanya untuk membuat penggunanya tertawa, bukan bermaksud untuk semena-mena dimuat begitu saja, mengetahui jika beberapa kata kasar ada didalam aplikasi ini. </string>
+    <string name="pref_set_cat">Pengaturan umum</string>
+    <string name="pref_set_vdb">Visit our blog</string>
+    <string name="pref_set_vdr">Visit our github</string>
+    <string name="pref_set_vdf">Find us on fb</string>
+    <string name="pref_vdb_summary">Click to visit our blog ^^</string>
+    <string name="pref_vdr_summary">Click to visit our repository ^^</string>
+    <string name="pref_vdf_summary">Click to visit our fb ^^</string>
+    <string name="pref_set_von">Transisi Gambar</string>
+    <string name="pref_set_von2">Ganti gambar transisi saat aplikasi dimulai</string>
+    <string name="pref_von_def">Bergetar dengan mesra</string>
+    <string name="pref_von_off">Diam saja</string>
+    <string name="pref_set_social">Social Media</string>
+    <string name="pref_set_theme">Tema</string>
+    <string name="pref_set_other">Lainnya</string>
+    <string name="pref_report_bug">Report bug</string>
+    <string name="pref_report_sum">Klik untuk memberi kritik, saran, maupun lapor bug</string>
+    <string name="pref_vibrate_set">Getar</string>
+    <string name="pref_vibrate_sum">Mengatur aktif/tidaknya getaran-getaran mesra pada aplikasi ini.</string>
+
+    <string name="about_app">
+        App name : Send Me Quotes! \nApp version : 1.1.0-SMQBCND15ST16TC \nApp developer : Renaldy P \nApp status: Beta (Conditional Version), jadi cuma dibagi ke temen-temen dulu aja :v \nApp description : Aplikasi ini adalah sebuah hasil dari keisengan saya semata,  sekaligus sebagai salah satu buah antusiasme saya dalam dunia Open Source dan Android. \n \nThanks to : Google, CodeAndroid Indonesia Grup, Github, Stack Exchange, serta berbagai website yang membantu memecahkan masalah saya ketika coding app simple ini (ga tanggung-tanggung kepala sampe pusing wkwkw) dan thanks to kalian semua :* \n\n DISCLAIMER: Aplikasi ini tidak untuk diperjual belikan, dan file suara yang dimuat oleh aplikasi ini bukanlah milik saya. \n\n \nm͏̣̼̻͔̟o͔̝͖̣̭͓͎n̟i̼͕̘̗͚ka̶̝͉m͉̜̼̼̲̠̜ó͔̮̟͙̙͙n̼i̺̗̻̯k̬͚a̛͔͚m̨͔o̶̪̺̠̞ͅn̗̟̬͇i̭̳̘͢ͅķ͕̮a͕̠̹͕͖̪͞ͅm̢͚o̷͎̖̭͓n̹̺̘̞i̡ͅk̘͢a̘̦̖ͅm̴o͎n̥̭̮͈ͅͅiͅͅk̙̰͕̘͎̤a̡m͏̣̼̻͔̟o͔̝͖̣̭͓͎n̟i̼͕̘̗͚ka̶̝͉m͉̜̼̼̲̠̜ó͔̮̟͙̙͙n̼i̺̗̻̯k̬͚a̛͔͚m̨͔o̶̪̺̠̞ͅn̗̟̬͇i̭̳̘͢ͅķ͕̮a͕̠̹͕͖̪͞ͅm̢͚o̷͎̖̭͓n̹̺̘̞i̡ͅk̘͢a̘̦̖ͅm̴o͎n̥̭̮͈ͅͅiͅͅk̙̰͕̘͎̤a̡m͏̣̼̻͔̟o͔̝͖̣̭͓͎n̟i̼͕̘̗͚ka̶̝͉m͉̜̼̼̲̠̜ó͔̮̟͙̙͙n̼i̺̗̻̯k̬͚a̛͔͚m̨͔o̶̪̺̠̞ͅn̗̟̬͇i̭̳̘͢ͅķ͕̮a͕̠̹͕͖̪͞ͅm̢͚o̷͎̖̭͓n̹̺̘̞i̡ͅk̘͢a̘̦̖ͅm̴o͎n̥̭̮͈ͅͅiͅͅk̙̰͕̘͎̤a̡m͏̣̼̻͔̟o͔̝͖̣̭͓͎n̟i̼͕̘̗͚ka̶̝͉m͉̜̼̼̲̠̜ó͔̮̟͙̙͙n̼i̺̗̻̯k̬͚a̛͔͚m̨͔o̶̪̺̠̞ͅn̗̟̬͇i̭̳̘͢ͅķ͕̮a͕̠̹͕͖̪͞ͅm̢͚o̷͎̖̭͓n̹̺̘̞i̡ͅk̘͢a̘̦̖ͅm̴o͎n̥̭̮͈ͅͅiͅͅk̙̰͕̘͎̤a̡m͏̣̼̻͔̟o͔̝͖̣̭͓͎n̟i̼͕̘̗͚ka̶̝͉m͉̜̼̼̲̠̜ó͔̮̟͙̙͙n̼i̺̗̻̯k̬͚a̛͔͚m̨͔o̶̪̺̠̞ͅn̗̟̬͇i̭̳̘͢ͅķ͕̮a͕̠̹͕͖̪͞ͅm̢͚o̷͎̖̭͓n̹̺̘̞i̡ͅk̘͢a̘̦̖ͅm̴o͎n̥̭̮͈ͅͅiͅͅk̙̰͕̘͎̤a̡m͏̣̼̻͔̟o͔̝͖̣̭͓͎n̟i̼͕̘̗͚ka̶̝͉m͉̜̼̼̲̠̜ó͔̮̟͙̙͙n̼i̺̗̻̯k̬͚a̛͔͚m̨͔o̶̪̺̠̞ͅn̗̟̬͇i̭̳̘͢ͅķ͕̮a͕̠̹͕͖̪͞ͅm̢͚o̷͎̖̭͓n̹̺̘̞i̡ͅk̘͢a̘̦̖ͅm̴o͎n̥̭̮͈ͅͅiͅͅk̙̰͕̘͎̤a̡m͏̣̼̻͔̟o͔̝͖̣̭͓͎n̟i̼͕̘̗͚ka̶̝͉m͉̜̼̼̲̠̜ó͔̮̟͙̙͙n̼i̺̗̻̯k̬͚a̛͔͚m̨͔o̶̪̺̠̞ͅn̗̟̬͇i̭̳̘͢ͅķ͕̮a͕̠̹͕͖̪͞ͅm̢͚o̷͎̖̭͓n̹̺̘̞i̡ͅk̘͢a̘̦̖ͅm̴o͎n̥̭̮͈ͅͅiͅͅk̙̰͕̘͎̤a̡m͏̣̼̻͔̟o͔̝͖̣̭͓͎n̟i̼͕̘̗͚ka̶̝͉m͉̜̼̼̲̠̜ó͔̮̟͙̙͙n̼i̺̗̻̯k̬͚a̛͔͚m̨͔o̶̪̺̠̞ͅn̗̟̬͇i̭̳̘͢ͅķ͕̮a͕̠̹͕͖̪͞ͅm̢͚o̷͎̖̭͓n̹̺̘̞i̡ͅk̘͢a̘̦̖ͅm̴o͎n̥̭̮͈ͅͅiͅͅk̙̰͕̘͎̤a̡m͏̣̼̻͔̟o͔̝͖̣̭͓͎n̟i̼͕̘̗͚ka̶̝͉m͉̜̼̼̲̠̜ó͔̮̟͙̙͙n̼i̺̗̻̯k̬͚a̛͔͚m̨͔o̶̪̺̠̞ͅn̗̟̬͇i̭̳̘͢ͅķ͕̮a͕̠̹͕͖̪͞ͅm̢͚o̷͎̖̭͓n̹̺̘̞i̡ͅk̘͢a̘̦̖ͅm̴o͎n̥̭̮͈ͅͅiͅͅk̙̰͕̘͎̤a̡m͏̣̼̻͔̟o͔̝͖̣̭͓͎n̟i̼͕̘̗͚ka̶̝͉m͉̜̼̼̲̠̜ó͔̮̟͙̙͙n̼i̺̗̻̯k̬͚a̛͔͚m̨͔o̶̪̺̠̞ͅn̗̟̬͇i̭̳̘͢ͅķ͕̮a͕̠̹͕͖̪͞ͅm̢͚o̷͎̖̭͓n̹̺̘̞i̡ͅk̘͢a̘̦̖ͅm̴o͎n̥̭̮͈ͅͅiͅͅk̙̰͕̘͎̤a̡m͏̣̼̻͔̟o͔̝͖̣̭͓͎n̟i̼͕̘̗͚ka̶̝͉m͉̜̼̼̲̠̜ó͔̮̟͙̙͙n̼i̺̗̻̯k̬͚a̛͔͚m̨͔o̶̪̺̠̞ͅn̗̟̬͇i̭̳̘͢ͅķ͕̮a͕̠̹͕͖̪͞ͅm̢͚o̷͎̖̭͓n̹̺̘̞i̡ͅk̘͢a̘̦̖ͅm̴o͎n̥̭̮͈ͅͅiͅͅk̙̰͕̘͎̤a̡m͏̣̼̻͔̟o͔̝͖̣̭͓͎n̟i̼͕̘̗͚ka̶̝͉m͉̜̼̼̲̠̜ó͔̮̟͙̙͙n̼i̺̗̻̯k̬͚a̛͔͚m̨͔o̶̪̺̠̞ͅn̗̟̬͇i̭̳̘͢ͅķ͕̮a͕̠̹͕͖̪͞ͅm̢͚o̷͎̖̭͓n̹̺̘̞i̡ͅk̘͢a̘̦̖ͅm̴o͎n̥̭̮͈ͅͅiͅͅk̙̰͕̘͎̤a̡m͏̣̼̻͔̟o͔̝͖̣̭͓͎n̟i̼͕̘̗͚ka̶̝͉m͉̜̼̼̲̠̜ó͔̮̟͙̙͙n̼i̺̗̻̯k̬͚a̛͔͚m̨͔o̶̪̺̠̞ͅn̗̟̬͇i̭̳̘͢ͅķ͕̮a͕̠̹͕͖̪͞ͅm̢͚o̷͎̖̭͓n̹̺̘̞i̡ͅk̘͢a̘̦̖ͅm̴o͎n̥̭̮͈ͅͅiͅͅk̙̰͕̘͎̤a̡m͏̣̼̻͔̟o͔̝͖̣̭͓͎n̟i̼͕̘̗͚ka̶̝͉m͉̜̼̼̲̠̜ó͔̮̟͙̙͙n̼i̺̗̻̯k̬͚a̛͔͚m̨͔o̶̪̺̠̞ͅn̗̟̬͇i̭̳̘͢ͅķ͕̮a͕̠̹͕͖̪͞ͅm̢͚o̷͎̖̭͓n̹̺̘̞i̡ͅk̘͢a̘̦̖ͅm̴o͎n̥̭̮͈ͅͅiͅͅk̙̰͕̘͎̤a̡m͏̣̼̻͔̟o͔̝͖̣̭͓͎n̟i̼͕̘̗͚ka̶̝͉m͉̜̼̼̲̠̜ó͔̮̟͙̙͙n̼i̺̗̻̯k̬͚a̛͔͚m̨͔o̶̪̺̠̞ͅn̗̟̬͇i̭̳̘͢ͅķ͕̮a͕̠̹͕͖̪͞ͅm̢͚o̷͎̖̭͓n̹̺̘̞i̡ͅk̘͢a̘̦̖ͅm̴o͎n̥̭̮͈ͅͅiͅͅk̙̰͕̘͎̤a̡m͏̣̼̻͔̟o͔̝͖̣̭͓͎n̟i̼͕̘̗͚ka̶̝͉m͉̜̼̼̲̠̜ó͔̮̟͙̙͙n̼i̺̗̻̯k̬͚a̛͔͚m̨͔o̶̪̺̠̞ͅn̗̟̬͇i̭̳̘͢ͅķ͕̮a͕̠̹͕͖̪͞ͅm̢͚o̷͎̖̭͓n̹̺̘̞i̡ͅk̘͢a̘̦̖ͅm̴o͎n̥̭̮͈ͅͅiͅͅk̙̰͕̘͎̤a̡m͏̣̼̻͔̟o͔̝͖̣̭͓͎n̟i̼͕̘̗͚ka̶̝͉m͉̜̼̼̲̠̜ó͔̮̟͙̙͙n̼i̺̗̻̯k̬͚a̛͔͚m̨͔o̶̪̺̠̞ͅn̗̟̬͇i̭̳̘͢ͅķ͕̮a͕̠̹͕͖̪͞ͅm̢͚o̷͎̖̭͓n̹̺̘̞i̡ͅk̘͢a̘̦̖ͅm̴o͎n̥̭̮͈ͅͅiͅͅk̙̰͕̘͎̤a̡
+    </string>
+    <string name="changelog_textv">Changelog: \n \n\n19-10-2017 Coding dan debugging :v | App lahir | App v1.0 | Menghabiskan waktu liburan kerja.\n\n20-12-2017: App rebuild | App v1.0.1 | Status aplikasi dinyatakan kedalam versi beta | Mengaplikasikan versi build app dari file build.flavor.desc | Penambahan beberapa fitur | \n\n26-12-2017: App v1.0.5 | Mengaplikasikan versi build aplikasi dari build.flavor.desc | Merombak UI pada \'about app\' | Penambahan SplashScreen dan Loading pada SplashScreen | Penambahan permission pada Manifest | Tambah menu baru \'Fitur lainnya\' \n\n 4 Januari 2018: Menambah fitur \'Phone Info\' | Fix switch senter untuk device Marshmallow dan keatas |  penambahan pesan peringatan setelah loading aplikasi selesai | Developer Preview 1 \n\n07-01-2018: Rombak hampir keseluruhan User Interface | Tema app menjadi Just Monika | Developer Preview 2 dan 3 | Menambahkan sedikit suara-suara mesra pada aplikasi ini \n\n16-01-18: Shape up Settings | Tambah pengaturan untuk ganti tema dan gambar transisi | Ganti suara latar saat aplikasi dibuka | Perhalus UI dan tambah beberapa definisi style pada xml | Fix posisi tab layout pada fitur lainnya | Move fitur kunjungi social media ke Settings | Code Clean up </string>
+    <string name="red_button">Terapkan</string>
+    <string name="blue_button">Terapkan</string>
+    <string name="white_button">Terapkan</string>
+    <string name="green_button">Terapkan</string>
+    <string name="black_button">Terapkan</string>
+    <string name="yellow_button">Terapkan</string>
+    <string name="mix_button">Terapkan</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="say_something_to_me">Katakan sesuatu pada Monika</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_close">Tutup Bantuan</string>
+
+    <string name="normal">Normal</string>
+
+    <string name="root">Extreme (ROOT)</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_help">Bantuan</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+</resources>

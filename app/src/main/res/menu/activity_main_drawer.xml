@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/about_app"
+            android:icon="@drawable/ic_info_trivia"
+            android:title="@string/app_info" />
+        <item
+            android:id="@+id/about_phone"
+            android:icon="@drawable/ic_about_phone"
+            android:title="@string/about_phone" />
+        <item
+            android:id="@+id/changelog"
+            android:icon="@drawable/ic_changelog"
+            android:title="@string/changelog" />
+        <item
+            android:id="@+id/other_feature"
+            android:icon="@drawable/ic_other_feature"
+            android:title="@string/other_feature" />
+
+        <item
+            android:id="@+id/clean_ram"
+            android:icon="@drawable/ic_autorenew"
+            android:title="@string/free_ram" />
+    </group>
+
+    <item android:title="@string/other_group"
+        android:icon="@drawable/ic_dashboard">
+        <menu>
+            <item
+                android:id="@+id/share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/share" />
+            <item
+                android:id="@+id/monika_chat"
+                android:title="@string/say_something_to_me"
+                android:icon="@drawable/ic_chat" />
+         </menu>
+    <group android:checkableBehavior="single">
+        <item android:title="@string/theme_swap">
+            <menu>
+                <item
+                    android:id="@+id/theme_swap"
+                    android:icon="@drawable/ic_theme_swap"
+                    android:title="@string/theme_red" />
+                <item
+                    android:id="@+id/theme_swap_blue"
+                    android:icon="@drawable/ic_theme_swap"
+                    android:title="@string/theme_blue" />
+                <item
+                    android:id="@+id/theme_swap_white"
+                    android:icon="@drawable/ic_theme_swap"
+                    android:title="@string/theme_white" />
+                <item
+                    android:id="@+id/theme_swap_green"
+                    android:icon="@drawable/ic_theme_swap"
+                    android:title="@string/theme_green" />
+                <item
+                    android:id="@+id/theme_swap_default"
+                    android:icon="@drawable/ic_theme_swap"
+                    android:title="@string/theme_default" />
+                <item
+                    android:id="@+id/theme_swap_yellow"
+                    android:icon="@drawable/ic_theme_swap"
+                    android:title="@string/theme_yellow" />
+                <item
+                    android:id="@+id/theme_swap_mix"
+                    android:icon="@drawable/ic_theme_swap"
+                    android:title="@string/theme_mix" />
+                </menu>
+            </item>
+        </group>
+        </item>
+    </menu>

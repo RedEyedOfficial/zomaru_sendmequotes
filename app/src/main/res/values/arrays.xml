@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="imageArray">
+        <item>Monika (Bawaan)</item>
+        <item>Zero Two</item>
+        <item>Akame</item>
+        <item>Mary</item>
+        <item>Methode</item>
+        <item>Nao Tomori (Whore)</item>
+    </string-array>
+
+    <string-array name="imageValues">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="themeArray">
+        <item>Light</item>
+        <item>Dark</item>
+        <item>Black</item>
+        <item>Akame Theme</item>
+        <item>Zero Two Theme</item>
+        <item>Methode Theme</item>
+        <item>Mary Theme</item>
+        <item>Indonesia Theme</item>
+    </string-array>
+
+    <string-array name="themeValues">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+    
+    
+    
+</resources>

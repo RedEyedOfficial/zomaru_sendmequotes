@@ -1,0 +1,78 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<PreferenceCategory
+		android:title="@string/pref_set_cat">
+		<ListPreference
+			android:key="trans_setting"
+            android:entries="@array/imageArray"
+            android:entryValues="@array/imageValues"
+            android:defaultValue="0" />
+		<ListPreference
+			android:key="setting_theme"
+			android:defaultValue="1"
+			android:entries="@array/themeArray"
+			android:entryValues="@array/themeValues" />
+		<SwitchPreference
+			android:key="vibrate_setting"
+			android:checked="false" />
+		<SwitchPreference
+			android:key="tutorial"
+			android:checked="false" />
+        <SwitchPreference
+            android:key="custom_username"
+            android:checked="false" />
+		<SwitchPreference
+			android:key="custom_wallpaper"
+			android:checked="false" />
+		<EditTextPreference
+			android:key="username"
+			android:hint="harap diisi dengan nama asli" />
+		</PreferenceCategory>
+	<PreferenceCategory
+		android:title="@string/pref_set_social">
+		<Preference
+			android:icon="@drawable/blogger"
+			android:title="@string/pref_set_vdb"
+			android:summary="@string/pref_vdb_summary">
+			<intent>
+			android:action="android.intent.action.VIEW"
+			android:data="https://zomaru.blogspot.co.id"
+			</intent>
+		</Preference>
+		<Preference
+			android:icon="@drawable/github"
+			android:title="@string/pref_set_vdr"
+			android:summary="@string/pref_vdr_summary">
+			<intent android:action="android.intent.action.VIEW"
+				android:data="https://github.com/zomaru" />
+		</Preference>
+		<Preference
+			android:icon="@drawable/fb"
+			android:title="@string/pref_set_vdf"
+			android:summary="@string/pref_vdf_summary">
+			<intent android:action="android.intent.action.VIEW"
+				android:data="https://www.facebook.com/alldie.attackattack" />
+		</Preference>
+	</PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/pref_set_other">
+        <Preference
+            android:title="@string/pref_report_bug"
+            android:summary="@string/pref_report_sum"
+            android:icon="@drawable/ic_report_bug"
+            android:key="bug_report">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https:www.facebook.com" />
+
+        </Preference>
+
+
+
+    </PreferenceCategory>
+
+
+
+
+
+
+</PreferenceScreen>
