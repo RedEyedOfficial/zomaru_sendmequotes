@@ -45,9 +45,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="600dp"
-                android:id="@+id/linearlayoutchild"
-                android:fitsSystemWindows="true"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <android.support.v7.widget.RecyclerView
@@ -70,7 +68,6 @@
                     android:layout_height="500dp"
                     android:layout_below="@id/image_recycler_changelog"
                     android:ellipsize="marquee"
-                    android:textColor="#000000"
                     android:textSize="20dp"
                     android:id="@+id/text_changelog_title"/>
 
@@ -80,11 +77,11 @@
                     android:layout_toRightOf="@id/image_recycler_changelog"
                     android:gravity="center_vertical"
                     android:id="@+id/text_changelog_subtitle"
-                    android:textColor="@color/colorAccent"
                     android:fitsSystemWindows="true"
                     android:textSize="10dp"/>
 
-        </RelativeLayout>
+            </RelativeLayout>
+
     </android.support.v4.widget.NestedScrollView>
 
 </android.support.design.widget.CoordinatorLayout>

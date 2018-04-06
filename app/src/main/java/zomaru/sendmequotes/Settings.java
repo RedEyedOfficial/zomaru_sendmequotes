@@ -1,19 +1,3 @@
-/*
- * Copyright (C) 2018 Red Eyed Official
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License. You may obtain a copy of
- * the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations under
- * the License.
- */
-
 package zomaru.sendmequotes;
 
 import android.app.Activity;
@@ -24,7 +8,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.EditTextPreference;
@@ -32,14 +15,11 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
+import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import Util.Settings.SettingThemeUtils;
-import Util.Settings.SettingTransitionPickerUtils;
-import Util.Settings.SettingVibrationUtils;
 
 public class Settings extends PreferenceActivity implements Preference.OnPreferenceChangeListener {
     public static final String TRANS_SETTING = "trans_setting";
@@ -47,24 +27,31 @@ public class Settings extends PreferenceActivity implements Preference.OnPrefere
     public static ListPreference transSetting;
     public static ListPreference themeSetting;
     public static Preference bugReport;
+    public static Preference appversion;
     public static SwitchPreference vibrator;
     public static SwitchPreference tutorial;
     public static SwitchPreference customusername;
     public static SwitchPreference customWallpaper;
+    public static SwitchPreference buttonshow;
     public static EditTextPreference username;
+    public static PreferenceScreen osl;
+    public static Preference opensl;
+    public static Preference library;
+    public static PreferenceScreen permissions;
     public static boolean isTutorOn;
     public static boolean isGetarOn;
+    public static boolean isVisible;
     public static SharedPreferences usernamepref;
-    public static SharedPreferences.Editor editor;
     public static boolean isUsernameAssigned;
     public static Context context;
     public static String usernameSender;
     public static String usernameBroadcaster;
-    public static Activity adc;
     public static int WallpaperValue;
     public static boolean isCustomOn;
     public static boolean isWallpaperCustom;
     public boolean saklar;
+    public CharSequence appver;
+    public static int Themevalues;
 
 
 
@@ -158,6 +145,11 @@ public class Settings extends PreferenceActivity implements Preference.OnPrefere
                 return true;
             }
         });
+
+        appversion = (Preference)findPreference("app_version");
+        appver = BuildConfig.VERSION_NAME;
+        appversion.setSummary(appver);
+
         tutorial = (SwitchPreference)findPreference("tutorial");
         tutorial.setTitle("Tutorial");
         tutorial.setSummary("Mengaktifkan bantuan untuk menggunakan aplikasi ketika mengklik help");
@@ -232,6 +224,22 @@ public class Settings extends PreferenceActivity implements Preference.OnPrefere
             }
         });
 
+        buttonshow = (SwitchPreference)findPreference("show_button");
+        buttonshow.setTitle("Tombol tak kasap mata");
+        buttonshow.setSummary("Mengatur visibilitas tombol pemilih custom wallpaper pada layar utama, jika diaktifkan maka tombol akan tidak terlihat, (aktifkan dahulu custom wallpaper untuk mengaktifkan fitur ini.)");
+        buttonshow.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+            @Override
+            public boolean onPreferenceChange(Preference preference, Object o) {
+                boolean visible = buttonshow.isChecked();
+                if (visible) {
+                    isVisible = false;
+                } else {
+                    isVisible = true;
+                }
+                return true;
+            }
+        });
+
         username = (EditTextPreference)findPreference("username");
         username.setTitle("Username");
         username.setDialogTitle("Silahkan masukkan username anda^^");
@@ -247,6 +255,35 @@ public class Settings extends PreferenceActivity implements Preference.OnPrefere
         usernameSender = usernameBroadcaster;
         username.setPersistent(true);
 
+        osl = (PreferenceScreen)findPreference("open_source");
+
+        opensl = (Preference)findPreference("osl");
+        opensl.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                startActivity(new Intent(Settings.this, OSLplusLib.class));
+                return true;
+            }
+        });
+        library = (Preference)findPreference("library");
+        library.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                startActivity(new Intent(Settings.this, OSLplusLib.class));
+                return true;
+            }
+        });
+
+        permissions = (PreferenceScreen)findPreference("permission_section");
+        permissions.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                Toast toast = Toast.makeText(Settings.this, "Under construction!", Toast.LENGTH_LONG);
+                toast.show();
+                return true;
+            }
+        });
+
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -258,34 +295,42 @@ public class Settings extends PreferenceActivity implements Preference.OnPrefere
             case 0:
                 lightApply();
                 listPreference.setSummary(listPreference.getEntries()[tst]);
+                Themevalues = 1;
                 break;
             case 1:
                 darkApply();
                 listPreference.setSummary(listPreference.getEntries()[tst]);
+                Themevalues = 2;
                 break;
             case 2:
                 blackApply();
                 listPreference.setSummary(listPreference.getEntries()[tst]);
+                Themevalues = 3;
                 break;
             case 3:
                 akameApply();
                 listPreference.setSummary(listPreference.getEntries()[tst]);
+                Themevalues = 4;
                 break;
             case 4:
                 zerotwoApply();
                 listPreference.setSummary(listPreference.getEntries()[tst]);
+                Themevalues = 5;
                 break;
             case 5:
                 methodeApply();
                 listPreference.setSummary(listPreference.getEntries()[tst]);
+                Themevalues = 6;
                 break;
             case 6:
                 maryApply();
                 listPreference.setSummary(listPreference.getEntries()[tst]);
+                Themevalues = 7;
                 break;
             case 7:
                 indonesiaApply();
                 listPreference.setSummary(listPreference.getEntries()[tst]);
+                Themevalues = 8;
                 break;
         } return true;
     }
@@ -321,32 +366,6 @@ public class Settings extends PreferenceActivity implements Preference.OnPrefere
 
     public void indonesiaApply () {
         SettingThemeUtils.setTheme(this, SettingThemeUtils.INDONESIA_THEME);
-    }
-
-    // Wallpaper changes //
-    public void monikaApply () {
-        adc = new MainActivity();
-        SettingTransitionPickerUtils.setTransition(adc, SettingTransitionPickerUtils.MONIKA);
-    }
-    public void z2Apply () {
-        adc = new MainActivity();
-        SettingTransitionPickerUtils.setTransition(adc, SettingTransitionPickerUtils.ZEROTWO);
-    }
-    public void akamechanApply () {
-        adc = new MainActivity();
-        SettingTransitionPickerUtils.setTransition(adc, SettingTransitionPickerUtils.AKAME);
-    }
-    public void marymeApply () {
-        adc = new MainActivity();
-        SettingTransitionPickerUtils.setTransition(adc, SettingTransitionPickerUtils.MARY);
-    }
-    public void methodeapply() {
-        adc = new MainActivity();
-        SettingTransitionPickerUtils.setTransition(adc, SettingTransitionPickerUtils.METHODE);
-    }
-    public void naowApply () {
-        adc = new MainActivity();
-        SettingTransitionPickerUtils.setTransition(adc, SettingTransitionPickerUtils.NAO);
     }
 
 }

@@ -24,6 +24,11 @@
 		<SwitchPreference
 			android:key="custom_wallpaper"
 			android:checked="false" />
+		<SwitchPreference
+			android:key="show_button"
+			android:checked="false"
+			android:disableDependentsState="true"
+			android:dependency="custom_wallpaper"/>
 		<EditTextPreference
 			android:key="username"
 			android:hint="harap diisi dengan nama asli" />
@@ -65,6 +70,31 @@
                 android:data="https:www.facebook.com" />
 
         </Preference>
+		<PreferenceScreen
+			android:title="Open Source Aspect"
+			android:summary="Klik untuk melihat mengenai Lisensi sumber terbuka dan pustaka yang digunakan."
+			android:icon="@drawable/ic_osl"
+			android:key="open_source">
+			<Preference
+				android:title="Open Source License"
+				android:summary="Klik untuk melihat OSL/Lisensi sumber terbuka"
+				android:key="osl"
+				android:icon="@drawable/ic_osl"/>
+			<Preference
+				android:title="Library"
+				android:summary="Daftar dari library yang kami gunakan pada aplikasi ini."
+				android:key="library"
+				android:icon="@drawable/ic_library"/>
+		</PreferenceScreen>
+		<PreferenceScreen
+			android:title="Perizinan"
+			android:summary="Mengatur aktif atau tidaknya segala izin atau permission yang diperlukan oleh aplikasi ini"
+			android:key="permission_section"
+			android:icon="@drawable/ic_permission" />
+		<Preference
+			android:title="App Version"
+			android:icon="@drawable/ic_appver"
+			android:key="app_version" />
 
 
 

@@ -36,7 +36,6 @@
                 android:layout_toRightOf="@id/image_recycler_about_phone"
                 android:ellipsize="marquee"
                 android:singleLine="true"
-                android:textColor="#000000"
                 android:text="sample"
                 android:textSize="12dp"
                 android:id="@+id/text_recycler_title"/>

@@ -1,46 +1,60 @@
-/*
- * Copyright (C) 2018 Red Eyed Official
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License. You may obtain a copy of
- * the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations under
- * the License.
- */
-
 package zomaru.sendmequotes;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.CollapsingToolbarLayout;
-import android.view.View;
-import android.widget.ImageButton;
-
-import zomaru.sendmequotes.ThemeSwap;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toolbar;
 
 //About app activity fragment which displays about app layout//
 
 public class AboutApp extends Activity {
+    public int ThemeValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Applytheme(this);
         setContentView(R.layout.about_app);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.tb);
+        setActionBar(toolbar);
+        toolbar.setTitle("About App");
+        ImageView imageView = (ImageView) findViewById(R.id.logoapp);
+        TextView textView = (TextView) findViewById(R.id.appvertext);
 
-        CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.cltl);
-        collapsingToolbarLayout.setTitle("About app");
+        imageView.setImageResource(R.drawable.about_me);
+        textView.setText("Send Me Quotes!" + System.lineSeparator() + "Developer: Renaldy P" + System.lineSeparator() + "App Version: " + BuildConfig.VERSION_NAME + System.lineSeparator() + "Copyright (C) 2018 Red Eyed Official" + System.lineSeparator() + "All rights reserved.");
 
-        collapsingToolbarLayout.setExpandedTitleColor(Color.BLACK);
-        collapsingToolbarLayout.setCollapsedTitleTextColor(Color.RED);
+
+        }
+
+        public void Applytheme (Activity activity) {
+            ThemeValue = Settings.Themevalues;
+            switch (ThemeValue) {
+                case 1:
+                    activity.setTheme(R.style.light_theme);
+                    break;
+                case 2:
+                    activity.setTheme(R.style.dark_theme);
+                    break;
+                case 3:
+                    activity.setTheme(R.style.black_theme);
+                    break;
+                case 4:
+                    activity.setTheme(R.style.akame_theme);
+                    break;
+                case 5:
+                    activity.setTheme(R.style.zero_two_theme);
+                    break;
+                case 6:
+                    activity.setTheme(R.style.methode_theme);
+                    break;
+                case 7:
+                    activity.setTheme(R.style.mary_theme);
+                    break;
+                case 8:
+                    activity.setTheme(R.style.indonesia_theme);
+                    break;
+            }
+        }
     }
-}

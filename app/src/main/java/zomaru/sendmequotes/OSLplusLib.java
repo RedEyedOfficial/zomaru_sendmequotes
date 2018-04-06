@@ -1,39 +1,43 @@
 package zomaru.sendmequotes;
 
 import android.app.Activity;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.widget.Toolbar;
 
-/**
- * Created by root on 1/10/18.
- */
 
-public class Trivia extends Activity {
+public class OSLplusLib extends FragmentActivity {
+    Toolbar toolbar;
+    TabLayout tabLayout;
+    ViewPager viewPager;
+    FVPoslpluslib Adapter;
     public int ThemeValue;
 
     @Override
-    public void onCreate (Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Applytheme(this);
-        setContentView(R.layout.fragment_trivia);
-        CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.cltl3);
-        collapsingToolbarLayout.setTitle("Trivia");
+        setContentView(R.layout.oslpluslibrary);
 
-        collapsingToolbarLayout.setExpandedTitleColor(Color.BLACK);
-        collapsingToolbarLayout.setCollapsedTitleTextColor(Color.RED);
-        android.widget.Toolbar toolbar = (android.widget.Toolbar)findViewById(R.id.tb3);
+        toolbar = (Toolbar) findViewById(R.id.osltool);
         setActionBar(toolbar);
-        toolbar.setTitleTextColor(Color.WHITE);
-        toolbar.setLogo(R.drawable.ic_info_trivia);
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+
+        viewPager = findViewById(R.id.vposl);
+        Adapter = new FVPoslpluslib(getSupportFragmentManager());
+        viewPager.setAdapter(Adapter);
+        tabLayout = findViewById(R.id.tlosl);
+        tabLayout.setupWithViewPager(viewPager);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();
             }
         });
+
+
     }
 
     public void Applytheme (Activity activity) {

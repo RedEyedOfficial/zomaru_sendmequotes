@@ -1,32 +1,12 @@
-/*
- * Copyright (C) 2018 Red Eyed Official
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License. You may obtain a copy of
- * the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations under
- * the License.
- */
-
 package zomaru.sendmequotes;
 
 import android.app.Activity;
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.widget.Toolbar;
 
 import java.util.ArrayList;
-import zomaru.sendmequotes.ThemeSwap;
 
 
 public class AboutPhone extends Activity {
@@ -34,11 +14,12 @@ public class AboutPhone extends Activity {
     private RecyclerView recyclerView;
     private AdapterAboutPhone adapterAboutPhone;
     private ArrayList<PhoneInfo>phoneInfoArrayList;
+    public int ThemeValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ThemeSwap.onActivityCreateSetTheme(this);
+        Applytheme(this);
         setContentView(R.layout.recycler_view_about_phone);
 
         addData();
@@ -76,5 +57,35 @@ public class AboutPhone extends Activity {
         phoneInfoArrayList.add(new PhoneInfo(infoDeviceDevice, Build.DEVICE));
         phoneInfoArrayList.add(new PhoneInfo(infoDeviceManufacturer, Build.MANUFACTURER));
         phoneInfoArrayList.add(new PhoneInfo(infoDeviceCodename, Build.BRAND + " " + Build.DEVICE));
+    }
+
+    public void Applytheme (Activity activity) {
+        ThemeValue = Settings.Themevalues;
+        switch (ThemeValue) {
+            case 1:
+                activity.setTheme(R.style.light_theme);
+                break;
+            case 2:
+                activity.setTheme(R.style.dark_theme);
+                break;
+            case 3:
+                activity.setTheme(R.style.black_theme);
+                break;
+            case 4:
+                activity.setTheme(R.style.akame_theme);
+                break;
+            case 5:
+                activity.setTheme(R.style.zero_two_theme);
+                break;
+            case 6:
+                activity.setTheme(R.style.methode_theme);
+                break;
+            case 7:
+                activity.setTheme(R.style.mary_theme);
+                break;
+            case 8:
+                activity.setTheme(R.style.indonesia_theme);
+                break;
+        }
     }
 }

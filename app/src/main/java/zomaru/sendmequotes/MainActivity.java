@@ -1,21 +1,6 @@
-/*
- * Copyright (C) 2018 Red Eyed Official
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License. You may obtain a copy of
- * the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations under
- * the License.
- */
-
 package zomaru.sendmequotes;
 
+import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -70,12 +55,13 @@ public class MainActivity extends AppCompatActivity
     public static TextView usernameUser;
     public static String UsernameRetriever;
     public static ImageButton imageButton;
+    public boolean penunjukTombol;
+    public int ThemeValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ThemeSwap.onActivityCreateSetTheme(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ima1 = (ImageView)findViewById(R.id.monika);
@@ -83,16 +69,13 @@ public class MainActivity extends AppCompatActivity
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                relay = Settings.isWallpaperCustom; // mengambil nilai boolean dari class Setting //
-                // jika user sudah mengaktifkan custom wallpaper, maka kode berikut akan dieksekusi //
+                relay = Settings.isWallpaperCustom;
                 if (relay) {
                     Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                     startActivityForResult(intent, WALLPAPER);
-                    imageButton.setVisibility(View.INVISIBLE); // imageButton dibuat invisible demi kenyamanan bersama saat melihat wallpaper :D //
                 } else {
                     Toast toast = Toast.makeText(MainActivity.this, "Aktifin dulu custom wallpaper di pengaturan gan!", Toast.LENGTH_LONG);
                     toast.show();
-                    // jika tidak, maka kode diatas akan dieksekusi //
                 }
             }
         });
@@ -113,14 +96,12 @@ public class MainActivity extends AppCompatActivity
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.menu_help:
-                        Mcb = Settings.isTutorOn; // mengambil nilai boolean dari class Settings //
-                        // jika user sudah mengaktifkan tutorial di pengaturan, maka code berikut akan dieksekusi //
+                        Mcb = Settings.isTutorOn;
                         if (Mcb) {
                             startTargetViewOnNavbar();
                         } else {
                             Toast noTutor = Toast.makeText(MainActivity.this, "No tutorial :(", Toast.LENGTH_LONG);
                             noTutor.show();
-                            // jika belum, maka kode diatas akan dieksekusi //
                         }
                         break;
                     case R.id.menu_trivia:
@@ -131,7 +112,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
         SettingCreator.mainActivityDialogCreator(this);
-        vibrateOn(this); // getar akan hidup kalau user sudah mengaktifkan getar di pengaturan //
+        vibrateOn(this);
     }
 
     @Override
@@ -143,45 +124,52 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onResume() {
         super.onResume();
-        sekring = Settings.isUsernameAssigned; // mengambil nilai boolean dari class Settings //
-        fuse = Settings.isCustomOn; // mengambil nilai boolean dari class Settings //
-        UsernameRetriever = Settings.usernameBroadcaster; // mengambil nilai String dari class Settings //
+        sekring = Settings.isUsernameAssigned;
+        fuse = Settings.isCustomOn;
+        UsernameRetriever = Settings.usernameBroadcaster;
         if (sekring) {
-            usernameUser.setText("Selamat Datang, " + UsernameRetriever); // jika nilai boolean sekring terpenuhi, maka teks di mainactivity akan menampilkan input default + input user dari EditTextPreference di pengaturan //
+            usernameUser.setText("Selamat Datang, " + UsernameRetriever);
         } else if (fuse) {
-            usernameUser.setText(UsernameRetriever); // jika pilihan custom username diaktifkan di pengaturan, maka seluruh input dari user akan ditampilkan di mainactivity //
+            usernameUser.setText(UsernameRetriever);
         }
-        intReceiver = Settings.WallpaperValue; // mengambil nilai int dari class Settings //
+        intReceiver = Settings.WallpaperValue;
         switch (intReceiver) {
             case 1:
                 imageButton = (ImageButton)findViewById(R.id.wallpaperpicker);
                 ima1.setImageResource(R.drawable.my_dear);
-                imageButton.setVisibility(View.INVISIBLE); // imageButton dibuat invisible demi kenyamanan bersama saat melihat wallpaper :D // 
+                imageButton.setVisibility(View.INVISIBLE);
                 break;
             case 2:
                 imageButton = (ImageButton)findViewById(R.id.wallpaperpicker);
                 ima1.setImageResource(R.drawable.zerotwo);
-                imageButton.setVisibility(View.INVISIBLE); // imageButton dibuat invisible demi kenyamanan bersama saat melihat wallpaper :D //
+                imageButton.setVisibility(View.INVISIBLE);
                 break;
             case 3:
                 imageButton = (ImageButton)findViewById(R.id.wallpaperpicker);
                 ima1.setImageResource(R.drawable.akame2);
-                imageButton.setVisibility(View.INVISIBLE); // imageButton dibuat invisible demi kenyamanan bersama saat melihat wallpaper :D //
+                imageButton.setVisibility(View.INVISIBLE);
                 break;
             case 4:
                 imageButton = (ImageButton)findViewById(R.id.wallpaperpicker);
                 ima1.setImageResource(R.drawable.mary2);
-                imageButton.setVisibility(View.INVISIBLE); // imageButton dibuat invisible demi kenyamanan bersama saat melihat wallpaper :D //
+                imageButton.setVisibility(View.INVISIBLE);
                 break;
             case 5:
                 imageButton = (ImageButton)findViewById(R.id.wallpaperpicker);
                 ima1.setImageResource(R.drawable.methode);
-                imageButton.setVisibility(View.INVISIBLE); // imageButton dibuat invisible demi kenyamanan bersama saat melihat wallpaper :D //
+                imageButton.setVisibility(View.INVISIBLE);
                 break;
             case 6:
                 imageButton = (ImageButton)findViewById(R.id.wallpaperpicker);
-                ima1.setImageResource(R.drawable.nao);
-                imageButton.setVisibility(View.INVISIBLE); // imageButton dibuat invisible demi kenyamanan bersama saat melihat wallpaper :D //
+                ima1.setImageResource(R.drawable.nao2);
+                imageButton.setVisibility(View.INVISIBLE);
+        }
+        penunjukTombol = Settings.isVisible;
+        imageButton = (ImageButton)findViewById(R.id.wallpaperpicker);
+        if (penunjukTombol) {
+            imageButton.setVisibility(View.INVISIBLE);
+        } else {
+            imageButton.setVisibility(View.VISIBLE);
         }
     }
 
@@ -236,8 +224,12 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        //noinspection SimplifiableIfStatement
         if (id == R.id.exit) {
             exitSound();
             final AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
@@ -360,20 +352,6 @@ public class MainActivity extends AppCompatActivity
                 }
             });
             alertDialog.show();
-        } else if (id == R.id.theme_swap) {
-            ThemeSwap.applyTheme(this, ThemeSwap.BLAZING_RED);
-        } else if (id == R.id.theme_swap_blue) {
-            ThemeSwap.applyTheme(this, ThemeSwap.OCEAN_BLUE);
-        } else if (id == R.id.theme_swap_white) {
-            ThemeSwap.applyTheme(this, ThemeSwap.MILK_WHITE);
-        } else if (id == R.id.theme_swap_green) {
-            ThemeSwap.applyTheme(this, ThemeSwap.LEAFY_GREEN);
-        } else if (id == R.id.theme_swap_default) {
-            ThemeSwap.applyTheme(this, ThemeSwap.TEMA_BAWAAN);
-        } else if (id == R.id.theme_swap_yellow) {
-            ThemeSwap.applyTheme(this, ThemeSwap.BRIGHT_YELLOW);
-        } else if (id == R.id.theme_swap_mix) {
-            ThemeSwap.applyTheme(this, ThemeSwap.MIX_COCKTAIL);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -432,6 +410,12 @@ public class MainActivity extends AppCompatActivity
                             .titleTextColor(R.color.white)
                             .outerCircleAlpha(0.76f),
                     TapTarget.forView(findViewById(R.id.menu_trivia), "ini adalah trivia, klik kalau kamu ingin melihat apa saja yang menginspirasi developer dalam mengembangkan app ini")
+                            .textColor(R.color.white)
+                            .targetCircleColor(R.color.red)
+                            .descriptionTextColor(R.color.white)
+                            .titleTextColor(R.color.white)
+                            .outerCircleAlpha(0.76f),
+                    TapTarget.forView(findViewById(R.id.wallpaperpicker), "ini adalah tombol kustom wallpaper, aktifkan dulu pengaturan kustom wallpaper, lalu kamu bisa mengatur wallpaper aplikasi ini dengan memilihnya langsung dari galeri kamu! ^^")
                             .textColor(R.color.white)
                             .targetCircleColor(R.color.red)
                             .descriptionTextColor(R.color.white)

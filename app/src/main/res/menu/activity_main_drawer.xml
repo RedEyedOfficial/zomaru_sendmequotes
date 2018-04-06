@@ -37,39 +37,5 @@
                 android:title="@string/say_something_to_me"
                 android:icon="@drawable/ic_chat" />
          </menu>
-    <group android:checkableBehavior="single">
-        <item android:title="@string/theme_swap">
-            <menu>
-                <item
-                    android:id="@+id/theme_swap"
-                    android:icon="@drawable/ic_theme_swap"
-                    android:title="@string/theme_red" />
-                <item
-                    android:id="@+id/theme_swap_blue"
-                    android:icon="@drawable/ic_theme_swap"
-                    android:title="@string/theme_blue" />
-                <item
-                    android:id="@+id/theme_swap_white"
-                    android:icon="@drawable/ic_theme_swap"
-                    android:title="@string/theme_white" />
-                <item
-                    android:id="@+id/theme_swap_green"
-                    android:icon="@drawable/ic_theme_swap"
-                    android:title="@string/theme_green" />
-                <item
-                    android:id="@+id/theme_swap_default"
-                    android:icon="@drawable/ic_theme_swap"
-                    android:title="@string/theme_default" />
-                <item
-                    android:id="@+id/theme_swap_yellow"
-                    android:icon="@drawable/ic_theme_swap"
-                    android:title="@string/theme_yellow" />
-                <item
-                    android:id="@+id/theme_swap_mix"
-                    android:icon="@drawable/ic_theme_swap"
-                    android:title="@string/theme_mix" />
-                </menu>
-            </item>
-        </group>
         </item>
     </menu>

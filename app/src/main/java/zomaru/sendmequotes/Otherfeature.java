@@ -1,19 +1,3 @@
-/*
- * Copyright (C) 2018 Red Eyed Official
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License. You may obtain a copy of
- * the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations under
- * the License.
- */
-
 package zomaru.sendmequotes;
 
 import android.app.Activity;
@@ -38,10 +22,12 @@ public class Otherfeature extends FragmentActivity {
     ViewPager viewPager;
     FeatureViewPager Adapter;
     public boolean Mcb;
+    public int ThemeValue;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Applytheme(this);
         setContentView(R.layout.other_feature);
 
         toolbar = (Toolbar) findViewById(R.id.other_feature_toolbar);
@@ -83,6 +69,7 @@ public class Otherfeature extends FragmentActivity {
             }
         });
         alertDialog.show();
+        alertDialog.setCancelable(false);
     }
 
     public void warningSound() {
@@ -94,5 +81,35 @@ public class Otherfeature extends FragmentActivity {
             }
         });
         mediaPlayer.start();
+    }
+
+    public void Applytheme (Activity activity) {
+        ThemeValue = Settings.Themevalues;
+        switch (ThemeValue) {
+            case 1:
+                activity.setTheme(R.style.light_theme);
+                break;
+            case 2:
+                activity.setTheme(R.style.dark_theme);
+                break;
+            case 3:
+                activity.setTheme(R.style.black_theme);
+                break;
+            case 4:
+                activity.setTheme(R.style.akame_theme);
+                break;
+            case 5:
+                activity.setTheme(R.style.zero_two_theme);
+                break;
+            case 6:
+                activity.setTheme(R.style.methode_theme);
+                break;
+            case 7:
+                activity.setTheme(R.style.mary_theme);
+                break;
+            case 8:
+                activity.setTheme(R.style.indonesia_theme);
+                break;
+        }
     }
 }

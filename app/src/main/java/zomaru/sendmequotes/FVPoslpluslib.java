@@ -4,15 +4,15 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import layout.normal;
-import layout.root;
+import layout.osl;
+import layout.library;
 
-public class FeatureViewPager extends FragmentPagerAdapter{
+public class FVPoslpluslib extends FragmentPagerAdapter {
 
     public static int number_tabs = 2;
-    private String tabTitle[] = new String[] {"Normal", "Extreme (ROOT)"};
+    private String tabTitle[] = new String[] {"Open Source License", "Library"};
 
-    public FeatureViewPager(FragmentManager fragmentManager) {
+    public FVPoslpluslib(FragmentManager fragmentManager) {
         super(fragmentManager);
     }
 
@@ -20,9 +20,9 @@ public class FeatureViewPager extends FragmentPagerAdapter{
     public Fragment getItem(int position) {
         switch (position){
             case 0:
-                return new normal();
+                return new osl();
             case 1:
-                return new root();
+                return new library();
         }
         return null;
     }

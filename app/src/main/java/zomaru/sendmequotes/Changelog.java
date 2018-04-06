@@ -1,19 +1,3 @@
-/*
- * Copyright (C) 2018 Red Eyed Official
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License. You may obtain a copy of
- * the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations under
- * the License.
- */
-
 package zomaru.sendmequotes;
 
 import android.app.Activity;
@@ -22,12 +6,9 @@ import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import java.util.ArrayList;
-
-import zomaru.sendmequotes.ThemeSwap;
 
 // Created by Renaldy P on 01-07-2018
 // menampilkan layout changelog
@@ -37,10 +18,10 @@ public class Changelog extends Activity {
     private RecyclerView recyclerView;
     private AdapterChangelog adapterChangelog;
     private ArrayList<ChangelogInfo>changelogArrayList;
+    public int ThemeValue;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ThemeSwap.onActivityCreateSetTheme(this);
         setContentView(R.layout.changelog_layout);
 
         CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.cltl2);
@@ -76,6 +57,7 @@ public class Changelog extends Activity {
         CharSequence changelog5;
         CharSequence changelog6;
         CharSequence changelog7;
+        CharSequence changelog8;
         CharSequence doneBy;
         changelog1 = "19-10-2017: App v1.0 | App lahir & menghabiskan waktu liburan kerja";
         changelog2 = "20-12-2017: App v1.0.1 | App rebuild | Status aplikasi: beta | Pengaplikasian versi build app dari file build.flavor.desc | Penambahan beberapa fitur";
@@ -84,6 +66,7 @@ public class Changelog extends Activity {
         changelog5 = "07-01-2018: App v1.0.5DP | Developer Preview 2 & 3 | Rombak hampir keseluruhan UI menjadi bertema Just Monika | Penambahan beberapa suara-suara mesra pada aplikasi ini";
         changelog6 = "16-01-2018: App v1.1.0 | Shape up Settings | Penambahan pengaturan pada aplikasi, untuk memudahkan anda mengatur aplikasi ini | Ganti suara yang digunakan saat aplikasi ini dimulai | Perhalus UI dan penambahan beberapa style baru pada xml | Fix posisi TabLayout pada fitur lainnya | Pindahkan fitur kunjungi media sosial ke Settings atau pengaturan";
         changelog7 = "03-04-2018: App v1.1.25.002 | Penambahan beberapa hal dan fitur baru di settings | Transisi gambar dihilangkan | Fix Pengatur getar | Fix tema belang di sisi kanan dan kiri layar | Penambahan tombol pemilih wallpaper langsung dari galeri di layar utama aplikasi | Penambahan teks sambutan di halaman utama app | Perubahan layout pada Changelog |dll";
+        changelog8 = "06-04-2018: App v1.2.002 | Hotfix untuk stock wallpaper Nao (whore) | Menu tema di navigation drawer dihapus, terapkan tema langsung dari pengaturan | tambah pengatur visibilitas tombol kustom wallpaper | tambah dependesi switch di pengaturan | perubahan icon di pengaturan | penambahan Open Source Aspect | Update trivia | dll";
         doneBy = " Done by: ZmR x Zero Two";
 
         changelogArrayList = new ArrayList<>();
@@ -94,5 +77,36 @@ public class Changelog extends Activity {
         changelogArrayList.add(new ChangelogInfo(changelog5, doneBy));
         changelogArrayList.add(new ChangelogInfo(changelog6, doneBy));
         changelogArrayList.add(new ChangelogInfo(changelog7, doneBy));
+        changelogArrayList.add(new ChangelogInfo(changelog8, doneBy));
+    }
+
+    public void Applytheme (Activity activity) {
+        ThemeValue = Settings.Themevalues;
+        switch (ThemeValue) {
+            case 1:
+                activity.setTheme(R.style.light_theme);
+                break;
+            case 2:
+                activity.setTheme(R.style.dark_theme);
+                break;
+            case 3:
+                activity.setTheme(R.style.black_theme);
+                break;
+            case 4:
+                activity.setTheme(R.style.akame_theme);
+                break;
+            case 5:
+                activity.setTheme(R.style.zero_two_theme);
+                break;
+            case 6:
+                activity.setTheme(R.style.methode_theme);
+                break;
+            case 7:
+                activity.setTheme(R.style.mary_theme);
+                break;
+            case 8:
+                activity.setTheme(R.style.indonesia_theme);
+                break;
+        }
     }
 }

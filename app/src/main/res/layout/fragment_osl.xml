@@ -2,17 +2,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="layout.normal">
+    tools:context="layout.osl">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:gravity="center"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:text="@string/normal" />
+        android:id="@+id/textosl"
+        android:text="@string/copyright"
+        android:gravity="left"
+        android:fitsSystemWindows="true"
+        android:textSize="20sp" />
 
 </FrameLayout>
