@@ -18,6 +18,9 @@
 		<SwitchPreference
 			android:key="tutorial"
 			android:checked="false" />
+        </PreferenceCategory>
+        <PreferenceCategory
+            android:title="App Customization">
         <SwitchPreference
             android:key="custom_username"
             android:checked="false" />
@@ -90,7 +93,16 @@
 			android:title="Perizinan"
 			android:summary="Mengatur aktif atau tidaknya segala izin atau permission yang diperlukan oleh aplikasi ini"
 			android:key="permission_section"
-			android:icon="@drawable/ic_permission" />
+			android:icon="@drawable/ic_permission">
+
+            <SwitchPreference
+                android:key="external_storage"
+                android:checked="false" />
+            <SwitchPreference
+                android:key="write_settings"
+                android:checked="false" />
+
+        </PreferenceScreen>
 		<Preference
 			android:title="App Version"
 			android:icon="@drawable/ic_appver"

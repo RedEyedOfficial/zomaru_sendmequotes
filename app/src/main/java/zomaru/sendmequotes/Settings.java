@@ -1,5 +1,6 @@
 package zomaru.sendmequotes;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -12,12 +13,18 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.preference.EditTextPreference;
 import android.preference.ListPreference;
+import android.preference.MultiSelectListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.widget.Toast;
+
+import com.getkeepsafe.taptargetview.TapTarget;
+import com.getkeepsafe.taptargetview.TapTargetSequence;
 
 import Util.Settings.SettingThemeUtils;
 
@@ -38,6 +45,8 @@ public class Settings extends PreferenceActivity implements Preference.OnPrefere
     public static Preference opensl;
     public static Preference library;
     public static PreferenceScreen permissions;
+    public static SwitchPreference externalreq;
+    public static SwitchPreference writesettreq;
     public static boolean isTutorOn;
     public static boolean isGetarOn;
     public static boolean isVisible;
@@ -52,7 +61,6 @@ public class Settings extends PreferenceActivity implements Preference.OnPrefere
     public boolean saklar;
     public CharSequence appver;
     public static int Themevalues;
-
 
 
     @Override
@@ -152,6 +160,7 @@ public class Settings extends PreferenceActivity implements Preference.OnPrefere
 
         tutorial = (SwitchPreference)findPreference("tutorial");
         tutorial.setTitle("Tutorial");
+        tutorial.setIcon(R.drawable.ic_tutorial);
         tutorial.setSummary("Mengaktifkan bantuan untuk menggunakan aplikasi ketika mengklik help");
         tutorial.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
@@ -168,6 +177,7 @@ public class Settings extends PreferenceActivity implements Preference.OnPrefere
 
         customusername = (SwitchPreference)findPreference("custom_username");
         customusername.setTitle("Custom Username?");
+        customusername.setIcon(R.drawable.ic_username_custom);
         customusername.setSummary("Hidupkan jika anda ingin mengganti tulisan sambutan di halaman awal aplikasi secara keseluruhan");
         customusername.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
@@ -197,6 +207,7 @@ public class Settings extends PreferenceActivity implements Preference.OnPrefere
 
         customWallpaper = (SwitchPreference)findPreference("custom_wallpaper");
         customWallpaper.setTitle("Custom Wallpaper?");
+        customWallpaper.setIcon(R.drawable.ic_wallpaper_custom);
         customWallpaper.setSummary("Terapkan wallpaper dari galeri langsung jika kalian bosan dengan pilihan wallpaper bawaan ^^");
         customWallpaper.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
@@ -226,6 +237,7 @@ public class Settings extends PreferenceActivity implements Preference.OnPrefere
 
         buttonshow = (SwitchPreference)findPreference("show_button");
         buttonshow.setTitle("Tombol tak kasap mata");
+        buttonshow.setIcon(R.drawable.ic_button_visible);
         buttonshow.setSummary("Mengatur visibilitas tombol pemilih custom wallpaper pada layar utama, jika diaktifkan maka tombol akan tidak terlihat, (aktifkan dahulu custom wallpaper untuk mengaktifkan fitur ini.)");
         buttonshow.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
@@ -242,6 +254,7 @@ public class Settings extends PreferenceActivity implements Preference.OnPrefere
 
         username = (EditTextPreference)findPreference("username");
         username.setTitle("Username");
+        username.setIcon(R.drawable.ic_username);
         username.setDialogTitle("Silahkan masukkan username anda^^");
         username.setSummary("Klik untuk mengatur username anda yang akan ditampilkan di halaman awal aplikasi");
         usernamepref = PreferenceManager.getDefaultSharedPreferences(this);
@@ -254,6 +267,48 @@ public class Settings extends PreferenceActivity implements Preference.OnPrefere
         }
         usernameSender = usernameBroadcaster;
         username.setPersistent(true);
+
+        externalreq = (SwitchPreference)findPreference("external_storage");
+        externalreq.setTitle("External Storage");
+        externalreq.setSummary("Izinkan aplikasi membaca penyimpanan eksternal");
+        externalreq.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+            @Override
+            public boolean onPreferenceChange(Preference preference, Object o) {
+                boolean izinkan = externalreq.isChecked();
+                if (izinkan) {
+                    Toast noIzin = Toast.makeText(Settings.this, "Izin ditolak :(", Toast.LENGTH_SHORT);
+                    noIzin.show();
+                } else {
+                    if (ContextCompat.checkSelfPermission(Settings.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)!=PackageManager.PERMISSION_GRANTED) {
+                        ActivityCompat.requestPermissions(Settings.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+                        Toast dapatIzin = Toast.makeText(Settings.this, "Izin diberikan ^^", Toast.LENGTH_SHORT);
+                        dapatIzin.show();
+                    }
+                }
+                return true;
+            }
+        });
+
+        writesettreq = (SwitchPreference)findPreference("write_settings");
+        writesettreq.setTitle("Write Settings");
+        writesettreq.setSummary("Izinkan aplikasi untuk mengubah setelan sistem");
+        writesettreq.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+            @Override
+            public boolean onPreferenceChange(Preference preference, Object o) {
+                boolean izinkeun = writesettreq.isChecked();
+                if (izinkeun) {
+                    Toast noIzin = Toast.makeText(Settings.this, "Izin ditolak :(", Toast.LENGTH_SHORT);
+                    noIzin.show();
+                } else {
+                    if (ContextCompat.checkSelfPermission(Settings.this, Manifest.permission.WRITE_SETTINGS)!= PackageManager.PERMISSION_GRANTED) {
+                        ActivityCompat.requestPermissions(Settings.this, new String[]{Manifest.permission.WRITE_SETTINGS}, 2);
+                        Toast dapatIzin = Toast.makeText(Settings.this, "Izin diberikan ^^", Toast.LENGTH_SHORT);
+                        dapatIzin.show();
+                    }
+                }
+                return true;
+            }
+        });
 
         osl = (PreferenceScreen)findPreference("open_source");
 
@@ -278,13 +333,50 @@ public class Settings extends PreferenceActivity implements Preference.OnPrefere
         permissions.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
-                Toast toast = Toast.makeText(Settings.this, "Under construction!", Toast.LENGTH_LONG);
-                toast.show();
+                final AlertDialog alertDialog = new AlertDialog.Builder(Settings.this).create();
+                alertDialog.setTitle("Perhatian! ");
+                alertDialog.setMessage("Kalau smartphonemu menggunakan OS Android dibawah Marshmallow, kamu nggak usah mengaktifkan permintaan izin secara manual dari sini, karena sudah otomatis aktif dari Manifest aplikasi ini." );
+                alertDialog.setIcon(R.drawable.zero2);
+                alertDialog.setCancelable(false);
+                alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "OK!", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        alertDialog.dismiss();
+                    }
+                });
+                alertDialog.show();
                 return true;
             }
         });
 
     }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case 1: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Toast toast = Toast.makeText(Settings.this, "Izin diberikan ^^", Toast.LENGTH_SHORT);
+                    toast.show();
+                } else {
+                    Toast toast = Toast.makeText(Settings.this, "Izin ditolak :(", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+            }
+            break;
+            case 2: {
+                if (grantResults.length > 1 && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
+                    Toast toast = Toast.makeText(Settings.this, "Izin diberikan ^^", Toast.LENGTH_SHORT);
+                    toast.show();
+                } else {
+                    Toast toast = Toast.makeText(Settings.this, "Izin ditolak :(", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+            }
+
+        }
+    }
+
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         final ListPreference listPreference = (ListPreference) preference;
