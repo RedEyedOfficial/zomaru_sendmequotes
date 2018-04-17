@@ -76,8 +76,11 @@
  * the License.\n
  */</string>
 
-    <string name="library">Library yang digunakan oleh aplikasi ini adalah sebagai berikut:\n\n 1. TapTargetView by Keepsafe</string>
+    <string name="library">Library yang digunakan oleh aplikasi ini adalah sebagai berikut:\n\n 1. TapTargetView by Keepsafe\n\n 2. ColorPreference by kizitonwose\n\n 3. LobsterPicker by Larswerkman\n\n 4. Butterknife by Jakewharton\n\n 5. Material EditText by Rengwuxian\n\n 6. Easing and Androidanimations by Daimajia \n\n 7. Draw Me by Rafakob</string>
 
     <string name="title_activity_help">Bantuan</string>
     <string name="title_activity_oslandlibrary">Information</string>
+    <string name="zsg">Zomaru Screen Gestures memungkinkan anda untuk mengaktifkan berbagai fitur gestur pada smartphone anda</string>
+    <string name="channel_name">Zomaru</string>
+    <string name="channel_desc">This is a channel notification</string>
 </resources>

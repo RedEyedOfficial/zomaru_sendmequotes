@@ -11,6 +11,10 @@
             android:icon="@drawable/ic_about_phone"
             android:title="@string/about_phone" />
         <item
+            android:id="@+id/avatar"
+            android:icon="@drawable/ic_transition"
+            android:title="Area 51" />
+        <item
             android:id="@+id/changelog"
             android:icon="@drawable/ic_changelog"
             android:title="@string/changelog" />

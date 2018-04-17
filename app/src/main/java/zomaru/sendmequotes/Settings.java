@@ -1,7 +1,6 @@
 package zomaru.sendmequotes;
 
 import android.Manifest;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -13,7 +12,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.preference.EditTextPreference;
 import android.preference.ListPreference;
-import android.preference.MultiSelectListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
@@ -23,8 +21,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.widget.Toast;
 
-import com.getkeepsafe.taptargetview.TapTarget;
-import com.getkeepsafe.taptargetview.TapTargetSequence;
+import com.kizitonwose.colorpreference.ColorPreference;
 
 import Util.Settings.SettingThemeUtils;
 
@@ -52,7 +49,7 @@ public class Settings extends PreferenceActivity implements Preference.OnPrefere
     public static boolean isVisible;
     public static SharedPreferences usernamepref;
     public static boolean isUsernameAssigned;
-    public static Context context;
+    public Context context;
     public static String usernameSender;
     public static String usernameBroadcaster;
     public static int WallpaperValue;
@@ -61,7 +58,10 @@ public class Settings extends PreferenceActivity implements Preference.OnPrefere
     public boolean saklar;
     public CharSequence appver;
     public static int Themevalues;
-
+    public ColorPreference colorPreference;
+    private SwitchPreference wallpapersystem;
+    private Preference avatar;
+    public static boolean permissiongranted;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -138,6 +138,7 @@ public class Settings extends PreferenceActivity implements Preference.OnPrefere
                 return true;
             }
         });
+
         bugReport = (Preference)findPreference("bug_report");
         bugReport.setTitle(R.string.pref_report_bug);
         bugReport.setSummary(R.string.pref_report_sum);
@@ -174,6 +175,11 @@ public class Settings extends PreferenceActivity implements Preference.OnPrefere
                 return true;
             }
         });
+
+        colorPreference = (ColorPreference)findPreference("color_username");
+        colorPreference.setTitle("Custom color username");
+        colorPreference.setSummary("Atur warna teks username sesuai keinginanmu");
+        colorPreference.setIcon(R.drawable.ic_username_color_control);
 
         customusername = (SwitchPreference)findPreference("custom_username");
         customusername.setTitle("Custom Username?");
@@ -289,6 +295,30 @@ public class Settings extends PreferenceActivity implements Preference.OnPrefere
             }
         });
 
+        wallpapersystem = (SwitchPreference)findPreference("system_wallpaper");
+        wallpapersystem.setTitle("Change Wallpaper");
+        wallpapersystem.setSummary("Izinkan aplikasi merubah wallpaper system");
+        wallpapersystem.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+            @Override
+            public boolean onPreferenceChange(Preference preference, Object o) {
+                boolean boleh = wallpapersystem.isChecked();
+                if (boleh) {
+                    Toast noIzin = Toast.makeText(Settings.this, "Izin ditolak :(", Toast.LENGTH_SHORT);
+                    noIzin.show();
+                    permissiongranted = false;
+                } else {
+                    if (ContextCompat.checkSelfPermission(Settings.this, Manifest.permission.SET_WALLPAPER) != PackageManager.PERMISSION_GRANTED) {
+                        ActivityCompat.requestPermissions(Settings.this, new String[]{Manifest.permission.SET_WALLPAPER}, 1);
+                        Toast dapatIzin = Toast.makeText(Settings.this, "Izin diberikan ^^", Toast.LENGTH_SHORT);
+                        dapatIzin.show();
+                        permissiongranted = true;
+                    }
+                }
+                    return true;
+            }
+
+        });
+
         writesettreq = (SwitchPreference)findPreference("write_settings");
         writesettreq.setTitle("Write Settings");
         writesettreq.setSummary("Izinkan aplikasi untuk mengubah setelan sistem");
@@ -376,7 +406,6 @@ public class Settings extends PreferenceActivity implements Preference.OnPrefere
 
         }
     }
-
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         final ListPreference listPreference = (ListPreference) preference;

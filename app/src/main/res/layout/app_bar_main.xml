@@ -50,9 +50,4 @@
         android:src="@drawable/ic_wallpaper"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="500dp"/>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/snackbar1" />
-
 </android.support.design.widget.CoordinatorLayout>

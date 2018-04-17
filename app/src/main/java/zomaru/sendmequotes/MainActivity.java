@@ -1,6 +1,5 @@
 package zomaru.sendmequotes;
 
-import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -38,8 +37,8 @@ import android.widget.Toast;
 import com.getkeepsafe.taptargetview.TapTarget;
 import com.getkeepsafe.taptargetview.TapTargetSequence;
 
+import zomaru.sendmequotes.Feature.Screen;
 import Util.Settings.SettingCreator;
-import Util.Settings.SettingTransitionPickerUtils;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -56,7 +55,6 @@ public class MainActivity extends AppCompatActivity
     public static String UsernameRetriever;
     public static ImageButton imageButton;
     public boolean penunjukTombol;
-    public int ThemeValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -275,10 +273,12 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(this, AboutApp.class));
         } else if (id == R.id.about_phone) {
             startActivity(new Intent(this, AboutPhone.class));
+        } else if (id == R.id.avatar) {
+            startActivity(new Intent(this, YoursSincerely.class));
         } else if (id == R.id.changelog) {
             startActivity(new Intent(this, Changelog.class));
         } else if (id == R.id.other_feature) {
-            startActivity(new Intent(this, Otherfeature.class));
+            startActivity(new Intent(this, Screen.class));
         } else if (id == R.id.clean_ram) {
             final String availableRAM;
             String percentRAM;

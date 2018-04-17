@@ -1,4 +1,5 @@
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
 
 	<PreferenceCategory
 		android:title="@string/pref_set_cat">
@@ -21,6 +22,12 @@
         </PreferenceCategory>
         <PreferenceCategory
             android:title="App Customization">
+			<com.kizitonwose.colorpreference.ColorPreference
+				android:key="color_username"
+				app:colorShape="circle"
+				app:showDialog="true"
+				app:numColumns="5"
+				app:colorChoices="@array/pilihan_warna"/>
         <SwitchPreference
             android:key="custom_username"
             android:checked="false" />
@@ -101,6 +108,9 @@
             <SwitchPreference
                 android:key="write_settings"
                 android:checked="false" />
+			<SwitchPreference
+				android:key="system_wallpaper"
+				android:checked="false" />
 
         </PreferenceScreen>
 		<Preference

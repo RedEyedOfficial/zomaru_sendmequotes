@@ -6,4 +6,22 @@
     <color name="red">#FF0000</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
+
+    <string-array name="pilihan_warna">
+        <item>#ffffff</item>
+        <item>#ff0000</item>
+        <item>#3f51b5</item>
+        <item>#ffff00</item>
+        <item>#000000</item>
+        <item>#66ffff</item>
+        <item>#d69999</item>
+        <item>#f743df84</item>
+        <item>#2c2b2b</item>
+        <item>#f21d8555</item>
+        <item>#f1fad699</item>
+        <item>#ce5b0924</item>
+        <item>#ff886e</item>
+        <item>#eb9758</item>
+        <item>#d692e3</item>
+    </string-array>
 </resources>

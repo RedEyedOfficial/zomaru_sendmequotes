@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen
+        android:key="normal_feature">
+        <PreferenceCategory
+            android:title="Tampilan">
+            <Preference
+                android:key="setsystem_wallpaper" />
+            </PreferenceCategory>
+            <PreferenceCategory
+                android:title="Gestur dan utilitas">
+            <PreferenceScreen
+                android:key="gesture">
+                <SwitchPreference
+                    android:key="mcb_utama"
+                    android:checked="false" />
+                <SwitchPreference
+                    android:key="three_finger_ss"
+                    android:checked="false"
+                    android:disableDependentsState="true"
+                    android:dependency="mcb_utama"/>
+                <SwitchPreference
+                    android:key="double_tap"
+                    android:checked="false"
+                    android:disableDependentsState="true"
+                    android:dependency="mcb_utama"/>
+                <SwitchPreference
+                    android:key="open_camera"
+                    android:checked="false"
+                    android:disableDependentsState="true"
+                    android:dependency="mcb_utama"/>
+                <SwitchPreference
+                    android:key="zmr_switch"
+                    android:checked="false"
+                    android:disableDependentsState="true"
+                    android:dependency="mcb_utama" />
+                <SwitchPreference
+                    android:key="dtts"
+                    android:checked="false"
+                    android:disableDependentsState="true"
+                    android:dependency="mcb_utama" />
+            </PreferenceScreen>
+                <SwitchPreference
+                    android:key="dnd_please"
+                    android:checked="false" />
+                <SwitchPreference
+                    android:key="torch"
+                    android:checked="false"/>
+            </PreferenceCategory>
+
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:key="root_feature" />
+</PreferenceScreen>
